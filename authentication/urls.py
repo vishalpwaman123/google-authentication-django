@@ -1,0 +1,33 @@
+from django.urls import path, include
+from .views import *
+
+urlpatterns = [
+    path('signUp/', signUpView.as_view(), name="signUP"),
+    path('signInEmail/', signInEmailView.as_view(), name="signInEmail"),
+    path('signInPassword/', signInPasswordView.as_view(), name="signInPassword"),
+    path('FindEmail/', FindEmailView.as_view(), name="FindEmail"),
+    path('FindEmailEnterFLName/',
+         FindEmailEnterFLNameView.as_view(), name="FindEmailEnterFLName"),
+    path('SendOtpOnEmail/',
+         SendOtpOnEmailView.as_view(), name="SendOtpOnEmail"),
+    path('EmailOtpVerification/', EmailOtpVerificationView.as_view(),
+         name="EmailOtpVerification"),
+    path('EnterMobileNumber/', EnterMobileNumberView.as_view(),
+         name="EnterMobileNumber"),
+    path('SendOtpOnMobileNumber/', SendOtpOnMobileNumberView.as_view(),
+         name="SendOtpOnMobileNumber"),
+    path('MobileOtpVerification/', MobileOtpVerificationView.as_view(),
+         name="MobileOtpVerification"),
+    path('SendVerificationLinkOnEmail/', SendVerificationLinkOnEmailView.as_view(),
+         name="SendVerificationLinkOnEmail"),
+    path('VerifiedAccountViaLink/', VerifiedAccountViaLinkView.as_view(),
+         name="VerifiedAccountViaLink"),
+    path('ResetPassword/', ResetPasswordView.as_view(),
+         name="ResetPassword"),
+    path('SendResetPasswordVerificationLinkOnEmail/', SendResetPasswordVerificationLinkOnEmailView.as_view(),
+         name="SendResetPasswordVerificationLinkOnEmail"),
+    path('DecodeJWTToken/', DecodeJWTTokenView.as_view(),
+         name="DecodeJWTToken"),
+    path('EncodeJWTToken/', EncodeJWTTokenView.as_view(),
+         name="EncodeJWTToken"),
+]

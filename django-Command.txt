@@ -1,0 +1,35 @@
+#Install Virtual Enviroment
+pip install --user virtualenv
+
+# Create Project
+django-admin startproject googleform_BE
+
+#Django Show Sub-Command
+django-admin
+ 
+#Create virtualenv
+python -m virtualenv env
+
+#DataBase Migration
+python manage.py makemigrations
+python manage.py migrate
+
+#Install Enviroment
+pip install django-environ
+
+#Create database in Mysql
+Database Name = django_googleforms
+
+#Install Core
+pip install --user wheel
+pip install django-core
+
+#Install rest framework
+pip install djangorestframework
+
+#install Swagger
+pip install --user drf-yasg
+
+#Run Server
+python manage.py runserver
+
